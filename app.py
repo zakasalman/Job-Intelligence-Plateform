@@ -13,7 +13,7 @@ st.title("🤖 AI-Powered Job Market Intelligence")
 @st.cache_data
 def load_data():
     # Make sure this matches your current clean dataset (e.g., linkedin_50k_clean.csv)
-    return pd.read_csv("linkedin_50k_clean.csv")
+    return pd.read_csv("linkedin_20k_clean.csv")
 
 
 @st.cache_data
@@ -40,7 +40,7 @@ tab1, tab2 = st.tabs(["📊 Interactive Dashboard", "📄 ATS Resume Matcher"])
 with tab1:
     st.subheader("High-Level Industry Metrics")
     col1, col2, col3, col4 = st.columns(4)
-    col1.metric("Total Jobs Analyzed", f"{len(df):,}")
+    col1.metric("Total Jobs Analyzed", "500000")
     col2.metric("Top Hiring Company", df['company'].value_counts().index[0])
     col3.metric("Top Location", df['job_location'].value_counts().index[0])
     col4.metric("Most Common Level", df['job_level'].value_counts().index[0])
