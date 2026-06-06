@@ -13,7 +13,7 @@ st.title("🤖 AI-Powered Job Market Intelligence")
 @st.cache_data
 def load_data():
     # Make sure this matches your current clean dataset (e.g., linkedin_50k_clean.csv)
-    return pd.read_csv("linkedin_20k_clean.csv")
+    return pd.read_csv("linkedin_50k_clean.csv")
 
 
 @st.cache_data
